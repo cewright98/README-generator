@@ -32,39 +32,6 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-/*
-function renderLicenseLink(license) {
-  if (license === 'None') {
-    return '';
-  }
-
-  var keyword = '';
-  switch(license) {
-    case 'MIT License':
-      keyword = 'mit';
-      break;
-    case 'GNU General Public License':
-      keyword = 'gpl-3.0';
-      break;
-    case 'Mozilla Public License':
-      keyword = 'mpl-2.0';
-      break;
-    case 'Apache License':
-      keyword = 'apache-2.0';
-      break;
-    case 'Boost Software License':
-      keyword = 'bsl-1.0'
-      break;
-    case 'The Unlicense':
-      keyword = 'unlicense';
-      break;
-  }
-  return 'https://choosealicense.com/licenses/' + keyword + '/';
-}
-*/
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 function renderLicenseLink(license) {
   if (license === 'None') {
     return '';
@@ -79,13 +46,13 @@ function renderLicenseLink(license) {
       link = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
       break;
     case 'Mozilla Public License':
-      link = 'https://www.mozilla.org/en-US/MPL/';
+      link = 'https://www.mozilla.org/en-US/MPL/2.0/';
       break;
     case 'Apache License':
-      link = 'https://www.apache.org/licenses/LICENSE-2.0';''
+      link = 'https://www.apache.org/licenses/LICENSE-2.0.txt';''
       break;
     case 'Boost Software License':
-      link = 'https://www.boost.org/users/license.html';
+      link = 'https://www.boost.org/LICENSE_1_0.txt';
       break;
     case 'The Unlicense':
       link = 'https://unlicense.org/';
@@ -93,6 +60,16 @@ function renderLicenseLink(license) {
   }
 
   return link;
+}
+
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+function renderLicenseSection(license) {
+  if (license === 'None') {
+    return 'This project is not licensed.';
+  }
+
+  return 'Licensed under ' + license + '; you may not use this file except in compliance with the License. You may obtain a copy of ' + license + ' at ' + renderLicenseLink(license);
 }
 
 // TODO: Create a function to generate markdown for README
@@ -116,14 +93,13 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-Licensed under ${data.license}; you may not use this file except in compliance with the License.
-You may obtain a copy of the License at ${renderLicenseLink(license)}
+${renderLicenseSection(license)}
 ## Contributing
 ${data.contributing}
 ## Tests
 ${data.tests}
 ## Questions
-Find me on github [here](https://github.com/${data.github}) or reach out to me via email at ${data.email} if you have any questions!
+Find me on github at [${data.github}](https://github.com/${data.github}) or reach out to me via email at ${data.email} if you have any questions!
   `;
 }
 

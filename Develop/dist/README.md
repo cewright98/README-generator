@@ -1,7 +1,7 @@
 # README generator
-  ![](https://img.shields.io/badge/license-MIT-brightgreen)
+  ![](https://img.shields.io/badge/license-Apache-brightgreen)
 ## Description
-generates Readmes
+generates a README file from the command line
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -10,16 +10,15 @@ generates Readmes
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-yeah
+run node index.js from the command line
 ## Usage
-uh
+generate readme
 ## License
-Licensed under [MIT License]; you may not use this file except in compliance with the License.
-You may obtain a copy of the License at https://www.mit.edu/~amini/LICENSE.md
+Licensed under Apache License; you may not use this file except in compliance with the License. You may obtain a copy of Apache License at https://www.apache.org/licenses/LICENSE-2.0
 ## Contributing
-a
+no
 ## Tests
-a
+no tests
 ## Questions
-Find me on github [here](https://github.com/a) or reach out to me via email at a if you have any questions!
+Find me on github at [cewright98](https://github.com/cewright98) or reach out to me via email at cewright1998@gmail.com if you have any questions!
   
