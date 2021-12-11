@@ -4,11 +4,10 @@ function renderLicenseBadge(license) {
   if (license === 'None') {
     return '';
   }
-  const keyword = '';
+
+  var keyword = '';
+
   switch(license) {
-    case 'none':
-      keyword = '';
-      break;
     case 'MIT License':
       keyword = 'MIT';
       break;
@@ -27,20 +26,74 @@ function renderLicenseBadge(license) {
     case 'The Unlicense':
       keyword = 'Unlicense';
       break;
-    case 'ISC License':
-      keyword = 'ISC';
-      break;
   }
   return 'https://img.shields.io/badge/license-' + keyword + '-brightgreen';
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+/*
+function renderLicenseLink(license) {
+  if (license === 'None') {
+    return '';
+  }
+
+  var keyword = '';
+  switch(license) {
+    case 'MIT License':
+      keyword = 'mit';
+      break;
+    case 'GNU General Public License':
+      keyword = 'gpl-3.0';
+      break;
+    case 'Mozilla Public License':
+      keyword = 'mpl-2.0';
+      break;
+    case 'Apache License':
+      keyword = 'apache-2.0';
+      break;
+    case 'Boost Software License':
+      keyword = 'bsl-1.0'
+      break;
+    case 'The Unlicense':
+      keyword = 'unlicense';
+      break;
+  }
+  return 'https://choosealicense.com/licenses/' + keyword + '/';
+}
+*/
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseLink(license) {
+  if (license === 'None') {
+    return '';
+  }
+
+  var link = '';
+  switch(license) {
+    case 'MIT License':
+      link = 'https://www.mit.edu/~amini/LICENSE.md';
+      break;
+    case 'GNU General Public License':
+      link = 'https://www.gnu.org/licenses/gpl-3.0.en.html';
+      break;
+    case 'Mozilla Public License':
+      link = 'https://www.mozilla.org/en-US/MPL/';
+      break;
+    case 'Apache License':
+      link = 'https://www.apache.org/licenses/LICENSE-2.0';''
+      break;
+    case 'Boost Software License':
+      link = 'https://www.boost.org/users/license.html';
+      break;
+    case 'The Unlicense':
+      link = 'https://unlicense.org/';
+      break;
+  }
+
+  return link;
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
@@ -48,7 +101,7 @@ function generateMarkdown(data) {
   const license = data.license;
   // call renderLicense functions using license variable parameter
   return `# ${data.title}
-  ![license badge](${renderLicenseBadge(license)})
+  ![](${renderLicenseBadge(license)})
 ## Description
 ${data.description}
 ## Table of Contents
@@ -63,7 +116,8 @@ ${data.installation}
 ## Usage
 ${data.usage}
 ## License
-${data.license}
+Licensed under ${data.license}; you may not use this file except in compliance with the License.
+You may obtain a copy of the License at ${renderLicenseLink(license)}
 ## Contributing
 ${data.contributing}
 ## Tests

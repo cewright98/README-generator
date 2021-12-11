@@ -1,7 +1,7 @@
-# a
-  ![license badge](https://img.shields.io/npm/l/mi)
+# README generator
+  ![](https://img.shields.io/badge/license-MIT-brightgreen)
 ## Description
-a
+generates Readmes
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -10,11 +10,12 @@ a
 * [Tests](#tests)
 * [Questions](#questions)
 ## Installation
-a
+yeah
 ## Usage
-a
+uh
 ## License
-None
+Licensed under [MIT License]; you may not use this file except in compliance with the License.
+You may obtain a copy of the License at https://www.mit.edu/~amini/LICENSE.md
 ## Contributing
 a
 ## Tests
