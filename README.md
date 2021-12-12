@@ -11,7 +11,8 @@ The primary function of this README generator is for other project creators who 
 
 Walkthrough video:
 
-https://user-images.githubusercontent.com/90212939/145725465-9f579887-5679-4e03-b18e-f439e95d51ea.mp4
+https://user-images.githubusercontent.com/90212939/145725724-63dd1806-a6a1-460c-ab79-731ea80f312d.mp4
+
 
 Example README built using this generator:
 
