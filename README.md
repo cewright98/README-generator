@@ -22,3 +22,5 @@ Example README built using this generator:
 * Node.js
 * Inquirer.js
 
+## Questions
+If you have any questions, find me on GitHub at [cewright98](https://github.com/cewright98) or email me at cewright1998@gmail.com.
