@@ -14,6 +14,7 @@ Walkthrough video:
 https://user-images.githubusercontent.com/90212939/145725465-9f579887-5679-4e03-b18e-f439e95d51ea.mp4
 
 Example README built using this generator:
+
 <img width="618" alt="Screen Shot 2021-12-12 at 1 42 43 PM" src="https://user-images.githubusercontent.com/90212939/145725472-d51bd25c-c333-41c6-a28a-34d51c35449d.png">
 
 ## Built With
